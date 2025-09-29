@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Hero from "../components/Hero";
+import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+  <div className="min-h-screen bg-gradient-to-br from-purple-200 via-purple-300 to-purple-100">
       {/* Navigation */}
       <nav className="px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -11,9 +12,9 @@ export default function Home() {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">TA</span>
             </div>
-            <span className="text-xl font-bold text-gray-800">Trip Amigo</span>
+            <span className="text-xl font-bold text-gray-800 font-graphite">Trip Amigo</span>
           </div>
-          <div className="hidden md:flex items-center space-x-8"></div>
+          {/* removed Get Started button per request */}
         </div>
       </nav>
 
@@ -24,7 +25,7 @@ export default function Home() {
 
           {/* Hero Image/Visual */}
           <div className="relative max-w-4xl mx-auto mt-16">
-            <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
+            <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-100 animate-float-bob">
               <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 mb-6">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -44,9 +45,8 @@ export default function Home() {
                     </div>
                     <div className="flex-1">
                       <div className="bg-gray-100 rounded-lg p-3">
-                        <p className="text-gray-600 italic">
-                          "I want to visit Japan for 10 days, focusing on
-                          traditional culture and modern cities..."
+                        <p className="text-gray-200 italic">
+                          <TypewriterEffectSmooth className="text-sm md:text-base" words={[{ text: "I want to visit Japan for 10 days, focusing on traditional culture and modern cities..." }]} speed={40} pause={1200} />
                         </p>
                       </div>
                     </div>
@@ -55,8 +55,8 @@ export default function Home() {
               </div>
 
               <div className="grid md:grid-cols-3 gap-4">
-                <div className="bg-blue-50 rounded-lg p-4 text-center">
-                  <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
+        <div className="bg-blue-50 rounded-lg p-4 text-center group transform transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-xl cursor-pointer">
+          <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3 transform transition-transform duration-500 group-hover:-translate-y-2">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="currentColor"
@@ -73,8 +73,8 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="bg-purple-50 rounded-lg p-4 text-center">
-                  <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
+        <div className="bg-purple-50 rounded-lg p-4 text-center group transform transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-xl cursor-pointer">
+          <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3 transform transition-transform duration-500 group-hover:-translate-y-2">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="currentColor"
@@ -91,8 +91,8 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="bg-green-50 rounded-lg p-4 text-center">
-                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+        <div className="bg-green-50 rounded-lg p-4 text-center group transform transition-all duration-500 hover:-translate-y-3 hover:scale-105 hover:shadow-xl cursor-pointer">
+          <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3 transform transition-transform duration-500 group-hover:-translate-y-2">
                     <svg
                       className="w-6 h-6 text-white"
                       fill="currentColor"
@@ -196,7 +196,7 @@ export default function Home() {
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-sm">TA</span>
                 </div>
-                <span className="text-xl font-bold">Trip Amigo</span>
+                <span className="text-xl font-bold font-graphite">Trip Amigo</span>
               </div>
               <p className="text-gray-400">
                 The future of travel planning is here. Experience it with AI.
